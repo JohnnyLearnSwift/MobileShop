@@ -11,14 +11,26 @@
 		E9D1C8F729491920001C6436 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D1C8F629491920001C6436 /* ContentView.swift */; };
 		E9D1C8F929491921001C6436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9D1C8F829491921001C6436 /* Assets.xcassets */; };
 		E9D1C8FC29491921001C6436 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9D1C8FB29491921001C6436 /* Preview Assets.xcassets */; };
+		E9D1C903294919F1001C6436 /* Phones.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D1C902294919F1001C6436 /* Phones.swift */; };
+		E9D1C9062949EF7F001C6436 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D1C9052949EF7F001C6436 /* NetworkService.swift */; };
+		E9D1C9082949F182001C6436 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D1C9072949F182001C6436 /* NetworkDataFetcher.swift */; };
+		E9D1C90C294A511A001C6436 /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D1C90B294A511A001C6436 /* DataFetcherService.swift */; };
+		E9D1C910294A5DA0001C6436 /* HotSales.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D1C90F294A5DA0001C6436 /* HotSales.swift */; };
+		E9D1C912294A634E001C6436 /* HotSalesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D1C911294A634D001C6436 /* HotSalesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E9D1C8F129491920001C6436 /* MobileShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9D1C8F129491920001C6436 /* Mobile Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D1C8F429491920001C6436 /* MobileShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileShopApp.swift; sourceTree = "<group>"; };
 		E9D1C8F629491920001C6436 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9D1C8F829491921001C6436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9D1C8FB29491921001C6436 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9D1C902294919F1001C6436 /* Phones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phones.swift; sourceTree = "<group>"; };
+		E9D1C9052949EF7F001C6436 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E9D1C9072949F182001C6436 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		E9D1C90B294A511A001C6436 /* DataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
+		E9D1C90F294A5DA0001C6436 /* HotSales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSales.swift; sourceTree = "<group>"; };
+		E9D1C911294A634D001C6436 /* HotSalesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSalesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +55,7 @@
 		E9D1C8F229491920001C6436 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E9D1C8F129491920001C6436 /* MobileShop.app */,
+				E9D1C8F129491920001C6436 /* Mobile Shop.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,6 +67,10 @@
 				E9D1C8F629491920001C6436 /* ContentView.swift */,
 				E9D1C8F829491921001C6436 /* Assets.xcassets */,
 				E9D1C8FA29491921001C6436 /* Preview Content */,
+				E9D1C9042949EEB4001C6436 /* Models */,
+				E9D1C90A2949F54B001C6436 /* NetworkService */,
+				E9D1C90F294A5DA0001C6436 /* HotSales.swift */,
+				E9D1C911294A634D001C6436 /* HotSalesCell.swift */,
 			);
 			path = MobileShop;
 			sourceTree = "<group>";
@@ -65,6 +81,24 @@
 				E9D1C8FB29491921001C6436 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E9D1C9042949EEB4001C6436 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E9D1C902294919F1001C6436 /* Phones.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E9D1C90A2949F54B001C6436 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				E9D1C9052949EF7F001C6436 /* NetworkService.swift */,
+				E9D1C9072949F182001C6436 /* NetworkDataFetcher.swift */,
+				E9D1C90B294A511A001C6436 /* DataFetcherService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,7 +118,7 @@
 			);
 			name = MobileShop;
 			productName = MobileShop;
-			productReference = E9D1C8F129491920001C6436 /* MobileShop.app */;
+			productReference = E9D1C8F129491920001C6436 /* Mobile Shop.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,8 +171,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D1C912294A634E001C6436 /* HotSalesCell.swift in Sources */,
+				E9D1C903294919F1001C6436 /* Phones.swift in Sources */,
+				E9D1C910294A5DA0001C6436 /* HotSales.swift in Sources */,
 				E9D1C8F729491920001C6436 /* ContentView.swift in Sources */,
+				E9D1C9062949EF7F001C6436 /* NetworkService.swift in Sources */,
 				E9D1C8F529491920001C6436 /* MobileShopApp.swift in Sources */,
+				E9D1C9082949F182001C6436 /* NetworkDataFetcher.swift in Sources */,
+				E9D1C90C294A511A001C6436 /* DataFetcherService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +313,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -281,10 +322,10 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eugenietyan.MobileShop;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mobile Shop";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,6 +343,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,10 +352,10 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eugenietyan.MobileShop;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mobile Shop";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
