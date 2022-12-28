@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CircleCategories: View {
     @State var cells = CircleDataManager.shared.cells
-    @State var selected = 0
     
     var body: some View {
         VStack {

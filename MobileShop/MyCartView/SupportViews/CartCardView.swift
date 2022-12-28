@@ -90,7 +90,6 @@ struct CartCardView: View {
                     .opacity(0.25)
                     .frame(height: 2)
                     .edgesIgnoringSafeArea(.horizontal)
-                    .offset(x: -80, y: 0)
                 VStack (spacing: 12){
                     HStack {
                         Text("Total")
@@ -133,7 +132,6 @@ struct CartCardView: View {
                 }
                 .padding()
                 .frame(width: geometry.size.width)
-                .offset(x: -70, y: 0)
             }
             .frame(height: geometry.size.height)
         }
