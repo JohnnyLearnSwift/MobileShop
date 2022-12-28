@@ -8,10 +8,25 @@
 import Foundation
 
 class DataFetcherService {
-    var networkDataFetcher = NetworkDataFetcher()
     
-    func fetchPhones(completion: @escaping (Phones?, Phones.Type) -> Void) {
+    static let shared = DataFetcherService()
+    
+    private init() {}
+    
+    private var networkDataFetcher = NetworkDataFetcher()
+    
+    func fetchPhones(completion: @escaping (Phones?) -> Void) {
         let url = "https://run.mocky.io/v3/654bd15e-b121-49ba-a588-960956b15175"
+        networkDataFetcher.fetchJSONData(urlString: url, response: completion)
+    }
+    
+    func fetchPhoneProperties(completion: @escaping (PhoneProperties?) -> Void) {
+        let url = "https://run.mocky.io/v3/6c14c560-15c6-4248-b9d2-b4508df7d4f5"
+        networkDataFetcher.fetchJSONData(urlString: url, response: completion)
+    }
+    
+    func fetchCart(completion: @escaping (Cart?) -> Void) {
+        let url = "https://run.mocky.io/v3/53539a72-3c5f-4f30-bbb1-6ca10d42c149"
         networkDataFetcher.fetchJSONData(urlString: url, response: completion)
     }
 }

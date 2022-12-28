@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct MobileShopApp: App {
+    @State var isShow = true
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

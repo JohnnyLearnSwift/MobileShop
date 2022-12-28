@@ -10,15 +10,15 @@ import Foundation
 class NetworkDataFetcher {
     var networkService = NetworkService()
     
-    func fetchJSONData<T: Decodable>(urlString: String, response: @escaping (T?, T.Type) -> Void) {
+    func fetchJSONData<T: Decodable>(urlString: String, response: @escaping (T?) -> Void) {
         networkService.request(urlString: urlString) { data, error in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
-                response(nil, T.self)
+                response(nil)
             }
             
             let decode = self.decodeJSON(type: T.self, data: data)
-            response(decode, T.self)
+            response(decode)
         }
     }
     

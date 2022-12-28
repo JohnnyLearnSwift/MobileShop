@@ -5,42 +5,52 @@
 //  Created by Eugenie Tyan on 13.12.2022.
 //
 
+import Foundation
+
 struct Phones: Decodable {
     var home_store: [Phone]?
     var best_seller: [Phone]?
 }
 
-struct Phone: Decodable {
+struct Phone: Decodable, Hashable {
     let is_new: Bool?
     let title: String
     let subtitle: String?
     let picture: String
     let is_buy: Bool?
-    var is_favorite: Bool?
+    var is_favorites: Bool?
     let price_without_discount: Int?
     let discount_price: Int?
 }
 
 struct PhoneProperties: Decodable {
-    let CPU: String
-    let camera: String
-    let capacity: [String]
-    let color: [String]
-    let images: [String]
-    var isFavorites: Bool
-    let price: Int
-    let rating: Double
-    let sd: String
-    let ssd: String
-    let title: String
+    var CPU: String?
+    var camera: String?
+    var capacity: [String]?
+    var color: [String]?
+    var images: [String]?
+    var isFavorites: Bool?
+    var price: Int?
+    var rating: Double?
+    var sd: String?
+    var ssd: String?
+    var title: String?
 }
 
 struct Cart: Decodable {
-    let basket: [PhoneInCart]
+    var basket: [PhoneInCart]?
+    var delivery: String?
 }
 
-struct PhoneInCart: Decodable {
+struct PhoneInCart: Decodable, Equatable, Identifiable {
+    let id: Int
     let images: String
     let price: Int
-    let title: String
+    var title: String
+}
+
+struct PhoneInCartWithQuantity: Identifiable, Equatable {
+    let id: Int
+    var phone: PhoneInCart
+    var quantity: Int
 }
