@@ -16,7 +16,7 @@ struct CartCardView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack (alignment: .leftView){
+            VStack (alignment: .leading){
                 ForEach(cart.cartItems) { product in
                     HStack(spacing: 5){
                         AsyncImage(url: URL(string: product.phone.images)) { image in
@@ -26,7 +26,7 @@ struct CartCardView: View {
                         }
                         .frame(width: 111, height: 89)
                         .cornerRadius(10)
-                        .alignmentGuide(.leftView) { d in
+                        .alignmentGuide(.leading) { d in
                             d[HorizontalAlignment.leading]
                         }
                         
@@ -34,14 +34,14 @@ struct CartCardView: View {
                             Text(product.phone.title)
                                 .font(Fonts.shared.getMediumFont(size: 20))
                                 .foregroundColor(.white)
-                                .alignmentGuide(.leftView) { d in
+                                .alignmentGuide(.leading) { d in
                                     d[HorizontalAlignment.leading]
                                 }
                             HStack {
                                 Text("$\(product.phone.price * product.quantity)")
                                     .font(Fonts.shared.getMediumFont(size: 20))
                                     .foregroundColor(orangeColor)
-                                    .alignmentGuide(.leftView) { d in
+                                    .alignmentGuide(.leading) { d in
                                         d[HorizontalAlignment.leading]
                                     }
                                 Spacer()

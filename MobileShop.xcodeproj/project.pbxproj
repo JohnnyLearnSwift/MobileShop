@@ -12,14 +12,13 @@
 		E90481B52955269D00283C5D /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90481B42955269D00283C5D /* CarouselView.swift */; };
 		E90481BA29553F1B00283C5D /* SpecificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90481B929553F1B00283C5D /* SpecificationsView.swift */; };
 		E90481BC2959A1BF00283C5D /* CartCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90481BB2959A1BF00283C5D /* CartCardView.swift */; };
-		E90481C12959BE5F00283C5D /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90481C02959BE5F00283C5D /* Alignment.swift */; };
 		E90481CF295C69A900283C5D /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90481CE295C69A900283C5D /* FilterView.swift */; };
-		E9A168492951CF0C00E55ACA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A168482951CF0C00E55ACA /* Fonts.swift */; };
 		E9A1685D2951E02B00E55ACA /* MarkPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9A1685A2951E02B00E55ACA /* MarkPro-Bold.ttf */; };
 		E9A1685E2951E02B00E55ACA /* MarkPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9A1685B2951E02B00E55ACA /* MarkPro-Regular.ttf */; };
 		E9A1685F2951E02B00E55ACA /* MarkPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9A1685C2951E02B00E55ACA /* MarkPro-Medium.ttf */; };
 		E9A168652952059100E55ACA /* BestSellerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A168642952059100E55ACA /* BestSellerCollectionView.swift */; };
 		E9A168672952059B00E55ACA /* BestSellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A168662952059B00E55ACA /* BestSellerCell.swift */; };
+		E9BBCE62295CE37A0086EB00 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBCE61295CE37A0086EB00 /* Fonts.swift */; };
 		E9D1C8F529491920001C6436 /* MobileShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D1C8F429491920001C6436 /* MobileShopApp.swift */; };
 		E9D1C8F929491921001C6436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9D1C8F829491921001C6436 /* Assets.xcassets */; };
 		E9D1C8FC29491921001C6436 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9D1C8FB29491921001C6436 /* Preview Assets.xcassets */; };
@@ -49,15 +48,14 @@
 		E90481B42955269D00283C5D /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		E90481B929553F1B00283C5D /* SpecificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificationsView.swift; sourceTree = "<group>"; };
 		E90481BB2959A1BF00283C5D /* CartCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCardView.swift; sourceTree = "<group>"; };
-		E90481C02959BE5F00283C5D /* Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
 		E90481CE295C69A900283C5D /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
-		E9A168482951CF0C00E55ACA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		E9A168552951D7D200E55ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E9A1685A2951E02B00E55ACA /* MarkPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Bold.ttf"; sourceTree = "<group>"; };
 		E9A1685B2951E02B00E55ACA /* MarkPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Regular.ttf"; sourceTree = "<group>"; };
 		E9A1685C2951E02B00E55ACA /* MarkPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Medium.ttf"; sourceTree = "<group>"; };
 		E9A168642952059100E55ACA /* BestSellerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerCollectionView.swift; sourceTree = "<group>"; };
 		E9A168662952059B00E55ACA /* BestSellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerCell.swift; sourceTree = "<group>"; };
+		E9BBCE61295CE37A0086EB00 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		E9D1C8F129491920001C6436 /* Ecommerce Concept.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecommerce Concept.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D1C8F429491920001C6436 /* MobileShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileShopApp.swift; sourceTree = "<group>"; };
 		E9D1C8F829491921001C6436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -241,8 +239,7 @@
 			children = (
 				E9D1C92A294BB97E001C6436 /* Colors.swift */,
 				E9D1C92D294D0D43001C6436 /* ImageLoader.swift */,
-				E9A168482951CF0C00E55ACA /* Fonts.swift */,
-				E90481C02959BE5F00283C5D /* Alignment.swift */,
+				E9BBCE61295CE37A0086EB00 /* Fonts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,6 +326,7 @@
 				E9D1C916294B1A22001C6436 /* CircleCategoriesCell.swift in Sources */,
 				E9D1C91D294BA57E001C6436 /* MainViewModel.swift in Sources */,
 				E90481B52955269D00283C5D /* CarouselView.swift in Sources */,
+				E9BBCE62295CE37A0086EB00 /* Fonts.swift in Sources */,
 				E9A168672952059B00E55ACA /* BestSellerCell.swift in Sources */,
 				E9D1C926294BA6A7001C6436 /* MyCartView.swift in Sources */,
 				E9D1C910294A5DA0001C6436 /* HotSales.swift in Sources */,
@@ -341,9 +339,7 @@
 				E9D1C919294B1B20001C6436 /* Cells.swift in Sources */,
 				E9D1C928294BA6B7001C6436 /* MyCartViewModel.swift in Sources */,
 				E9D1C9082949F182001C6436 /* NetworkDataFetcher.swift in Sources */,
-				E9A168492951CF0C00E55ACA /* Fonts.swift in Sources */,
 				E90481B0295522B200283C5D /* LeftBarButtonView.swift in Sources */,
-				E90481C12959BE5F00283C5D /* Alignment.swift in Sources */,
 				E9A168652952059100E55ACA /* BestSellerCollectionView.swift in Sources */,
 				E9D1C90C294A511A001C6436 /* DataFetcherService.swift in Sources */,
 				E9D1C923294BA636001C6436 /* ProductDetailsView.swift in Sources */,
