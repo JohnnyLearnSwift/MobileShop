@@ -24,29 +24,16 @@ struct FilterView: View {
                     .shadow(radius: 1)
                 VStack {
                     HStack {
-                        Button {
+                        CommonButton(image: Image(systemName: "xmark"), title: nil, foregroundColor: .white, width: 37, height: 37, backgroundColor: blackColor, cornerRadius: 10, font: nil) {
                             isShow.toggle()
-                        } label: {
-                            Image(systemName: "xmark")
                         }
-                        .foregroundColor(.white)
-                        .frame(width: 37, height: 37)
-                        .background(blackColor)
-                        .cornerRadius(10)
                         Spacer()
                         Text("Filter options")
                             .font(Fonts.shared.getMediumFont(size: 18))
                             .foregroundColor(blackColor)
                         Spacer()
-                        Button {
+                        CommonButton(image: nil, title: "Done", foregroundColor: .white, width: 86, height: 37, backgroundColor: orangeColor, cornerRadius: 10, font: Fonts.shared.getMediumFont(size: 18)) {
                             isShow.toggle()
-                        } label: {
-                            Text("Done")
-                                .foregroundColor(.white)
-                                .font(Fonts.shared.getMediumFont(size: 18))
-                                .frame(width: 86, height: 37)
-                                .background(orangeColor)
-                                .cornerRadius(10)
                         }
                     }
                     .padding(.leading, 44)
