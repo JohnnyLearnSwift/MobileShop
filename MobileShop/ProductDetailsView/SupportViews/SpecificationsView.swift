@@ -9,9 +9,9 @@ import SwiftUI
 
 struct SpecificationsView: View {
     let viewModel: ProductDetailsViewModel
-    let blackColor = Colors.shared.black
-    let grayColor = Colors.shared.grayTextSettings
-    let orangeColor = Colors.shared.orange
+    let blackColor = Colors.black
+    let grayColor = Colors.grayTextSettings
+    let orangeColor = Colors.orange
     let list = ["Shop", "Details", "Features"]
     var index = 0
     var rating: Int {
@@ -159,7 +159,7 @@ struct SpecificationsView: View {
         let image: Image
         let width: CGFloat
         let height: CGFloat
-        let color = Colors.shared.grayTextSettings
+        let color = Colors.grayTextSettings
         let text: String
         
         var body: some View {

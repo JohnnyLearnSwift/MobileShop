@@ -10,8 +10,8 @@ import SwiftUI
 struct BottomBarView: View {
     @StateObject var mainViewModel: MainViewModel
     let width = UIScreen.main.bounds.width
-    let blackColor = Colors.shared.black
-    let orangeColor = Colors.shared.orange
+    let blackColor = Colors.black
+    let orangeColor = Colors.orange
     var goodsCount: Int {
         mainViewModel.cart.basket?.count ?? 0
     }

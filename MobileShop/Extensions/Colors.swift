@@ -8,17 +8,14 @@
 import SwiftUI
 
 class Colors {
-    static let shared = Colors()
     
-    private init() {}
-    
-    let orange = Color(hex: "ff6e4e")
-    let black = Color(hex: "010035")
-    let blackButtons = Color(hex: "282843")
-    let gray = Color(hex: "cccccc")
-    let grayForChevron = Color(hex: "b3b3b3")
-    let grayTextSettings = Color(hex: "b7b7b7")
-    let grayTrash = Color(hex: "36364d")
+    static let orange = Color(hex: "ff6e4e")
+    static let black = Color(hex: "010035")
+    static let blackButtons = Color(hex: "282843")
+    static let gray = Color(hex: "cccccc")
+    static let grayForChevron = Color(hex: "b3b3b3")
+    static let grayTextSettings = Color(hex: "b7b7b7")
+    static let grayTrash = Color(hex: "36364d")
 }
 
 extension Color {

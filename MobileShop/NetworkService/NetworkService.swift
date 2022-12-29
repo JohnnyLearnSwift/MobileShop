@@ -7,7 +7,12 @@
 
 import Foundation
 
-class NetworkService {
+protocol NetworkServiceProtocol {
+    func request(urlString: String, completion: @escaping (Data?, Error?) -> Void)
+    func createDataTask(request: URLRequest, completion: @escaping (Data?, Error?) -> Void) -> URLSessionDataTask
+}
+
+class NetworkService: NetworkServiceProtocol {
     
     func request(urlString: String, completion: @escaping (Data?, Error?) -> Void) {
         guard let url = URL(string: urlString) else { return }
@@ -16,8 +21,8 @@ class NetworkService {
         task.resume()
     }
     
-    private func createDataTask(request: URLRequest, completion: @escaping (Data?, Error?) -> Void) -> URLSessionDataTask {
-        return URLSession.shared.dataTask(with: request, completionHandler: { (data, _, error) in
+    internal func createDataTask(request: URLRequest, completion: @escaping (Data?, Error?) -> Void) -> URLSessionDataTask {
+        URLSession.shared.dataTask(with: request, completionHandler: { (data, _, error) in
             DispatchQueue.main.async {
                 completion(data, error)
             }

@@ -10,8 +10,8 @@ import SwiftUI
 struct HotSalesCell: View {
     let phoneCell: Phone
     let height: CGFloat
-    let orangeColor = Colors.shared.orange
-    let blackColor = Colors.shared.black
+    let orangeColor = Colors.orange
+    let blackColor = Colors.black
     var isNew: Bool {
         phoneCell.is_new ?? false
     }

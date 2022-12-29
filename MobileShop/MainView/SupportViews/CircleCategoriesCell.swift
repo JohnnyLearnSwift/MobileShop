@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CircleCategoriesCell: View {
     let cell: CircleCell
-    let orangeColor = Colors.shared.orange
-    let blackColor = Colors.shared.black
+    let orangeColor = Colors.orange
+    let blackColor = Colors.black
     var body: some View {
         VStack {
             ZStack {

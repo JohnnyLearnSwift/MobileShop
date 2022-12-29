@@ -9,9 +9,9 @@ import SwiftUI
 
 struct BestSellerCell: View {
     let phoneCell: Phone
-    let orangeColor = Colors.shared.orange
-    let blackColor = Colors.shared.black
-    let grayColor = Colors.shared.gray
+    let orangeColor = Colors.orange
+    let blackColor = Colors.black
+    let grayColor = Colors.gray
     var isFavorite: Bool {
         phoneCell.is_favorites ?? false
     }
@@ -59,7 +59,7 @@ struct BestSellerCell: View {
 
 struct FavoriteView: View {
     var isFavorite: Bool
-    let orangeColor = Colors.shared.orange
+    let orangeColor = Colors.orange
     
     var body: some View {
         ZStack {

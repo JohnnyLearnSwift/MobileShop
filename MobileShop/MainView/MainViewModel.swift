@@ -22,20 +22,22 @@ class MainViewModel: MainViewModelProtocol, ObservableObject {
     @Published var phoneProperties: PhoneProperties = PhoneProperties()
     @Published var cart: Cart = Cart()
     
+    let dataFetcherServices: DataFetcherServiceProtocol = DataFetcherService()
+    
     func fetchPhones() {
-        DataFetcherService.shared.fetchPhones { [unowned self] phones in
+        dataFetcherServices.fetchPhones { [unowned self] phones in
             self.phones = phones ?? Phones()
         }
     }
     
     func fetchPhoneProperties() {
-        DataFetcherService.shared.fetchPhoneProperties { [unowned self] phoneProperties in
+        dataFetcherServices.fetchPhoneProperties { [unowned self] phoneProperties in
             self.phoneProperties = phoneProperties ?? PhoneProperties()
         }
     }
     
     func fetchCart() {
-        DataFetcherService.shared.fetchCart { [unowned self] cart in
+        dataFetcherServices.fetchCart { [unowned self] cart in
             self.cart = cart ?? Cart()
         }
     }

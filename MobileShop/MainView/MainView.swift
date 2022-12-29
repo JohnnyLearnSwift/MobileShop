@@ -10,9 +10,9 @@ import SwiftUI
 struct MainView: View {
     @StateObject private var viewModel = MainViewModel()
     @State var isShow = false
-    let orangeColor = Colors.shared.orange
-    let blackColor = Colors.shared.black
-    let grayColor = Colors.shared.grayForChevron
+    let orangeColor = Colors.orange
+    let blackColor = Colors.black
+    let grayColor = Colors.grayForChevron
     
     var body: some View {
         NavigationView {

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct FilterView: View {
     @Binding var isShow: Bool
-    let blackColor = Colors.shared.black
-    let orangeColor = Colors.shared.orange
+    let blackColor = Colors.black
+    let orangeColor = Colors.orange
     let brands = ["Samsung", "Iphone", "Xiaomi"]
     let prices = ["$300 - $500", "$500 - $1000", "$1000 and more"]
     let sizes = ["4.5 to 5.5 inches", "5.5 to 7.5 inches", "7.5 and more"]
@@ -74,8 +74,8 @@ struct DropDownMenu: View {
     let dropDownList: [String]
     let title: String
     @State var index = 0
-    let blackColor = Colors.shared.black
-    let grayColor = Colors.shared.grayForChevron
+    let blackColor = Colors.black
+    let grayColor = Colors.grayForChevron
     
 //MARK: Работает в отдельном вью, но когда добавляю в main менюхи перестают выпадать
     var body: some View {

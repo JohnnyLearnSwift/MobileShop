@@ -7,8 +7,15 @@
 
 import Foundation
 
-class NetworkDataFetcher {
-    var networkService = NetworkService()
+protocol NetworkDataFetcherProtocol {
+    var networkService: NetworkServiceProtocol { get }
+    
+    func fetchJSONData<T: Decodable>(urlString: String, response: @escaping (T?) -> Void)
+    func decodeJSON<T: Decodable>(type: T.Type, data: Data?) -> T?
+}
+
+class NetworkDataFetcher: NetworkDataFetcherProtocol {
+    internal var networkService: NetworkServiceProtocol = NetworkService()
     
     func fetchJSONData<T: Decodable>(urlString: String, response: @escaping (T?) -> Void) {
         networkService.request(urlString: urlString) { data, error in
@@ -22,7 +29,7 @@ class NetworkDataFetcher {
         }
     }
     
-    private func decodeJSON<T: Decodable>(type: T.Type, data: Data?) -> T? {
+    internal func decodeJSON<T: Decodable>(type: T.Type, data: Data?) -> T? {
         let decoder = JSONDecoder()
         guard let data = data else { return nil }
         do {

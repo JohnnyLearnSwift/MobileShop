@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ProductDetailsView: View {
     var viewModel: ProductDetailsViewModel
-    let blackColor = Colors.shared.black
-    let orangeColor = Colors.shared.orange
+    let blackColor = Colors.black
+    let orangeColor = Colors.orange
     
     var body: some View {
         ScrollView {

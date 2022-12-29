@@ -7,13 +7,17 @@
 
 import Foundation
 
-class DataFetcherService {
+protocol DataFetcherServiceProtocol {
+    var networkDataFetcher: NetworkDataFetcherProtocol { get }
     
-    static let shared = DataFetcherService()
+    func fetchPhones(completion: @escaping (Phones?) -> Void)
+    func fetchPhoneProperties(completion: @escaping (PhoneProperties?) -> Void)
+    func fetchCart(completion: @escaping (Cart?) -> Void)
+}
+
+class DataFetcherService: DataFetcherServiceProtocol {
+    internal var networkDataFetcher: NetworkDataFetcherProtocol = NetworkDataFetcher()
     
-    private init() {}
-    
-    private var networkDataFetcher = NetworkDataFetcher()
     
     func fetchPhones(completion: @escaping (Phones?) -> Void) {
         let url = "https://run.mocky.io/v3/654bd15e-b121-49ba-a588-960956b15175"

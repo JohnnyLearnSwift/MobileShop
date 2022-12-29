@@ -9,9 +9,9 @@ import SwiftUI
 
 struct CartCardView: View {
     @EnvironmentObject var cart: MyCartViewModel
-    let orangeColor = Colors.shared.orange
-    let grayColor = Colors.shared.grayTrash
-    let black = Colors.shared.blackButtons
+    let orangeColor = Colors.orange
+    let grayColor = Colors.grayTrash
+    let black = Colors.blackButtons
     
     
     var body: some View {
