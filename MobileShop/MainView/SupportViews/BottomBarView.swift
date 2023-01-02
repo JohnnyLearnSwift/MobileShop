@@ -12,6 +12,8 @@ struct BottomBarView: View {
     let width = UIScreen.main.bounds.width
     let blackColor = Colors.black
     let orangeColor = Colors.orange
+    let whiteColor = Color.white
+    let clearColor = Color.clear
     var goodsCount: Int {
         mainViewModel.cart.basket?.count ?? 0
     }
@@ -29,15 +31,15 @@ struct BottomBarView: View {
                 .frame(width: 8, height: 8)
                 .offset(x: 68, y: 0)
                 .foregroundColor(.white)
-            Text("Explorer")
-                .font(Fonts.shared.getBoldFont(size: 15))
-                .foregroundColor(.white)
+            TextViewWithParams(text: "Explorer",
+                               font: Fonts.shared.getBoldFont(size: 15),
+                               color: whiteColor)
                 .offset(x: 83, y: 0)
             
             ZStack {
                 NavigationLink(destination: MyCartView(viewModel: MyCartViewModel(cart: mainViewModel.cart))) {
                     Image(systemName: "bag")
-                        .foregroundColor(.white)
+                        .foregroundColor(whiteColor)
                         .frame(width: 18, height: 18)
                 }
                 
@@ -45,21 +47,21 @@ struct BottomBarView: View {
                 ZStack {
                     Circle()
                         .frame(width: 9, height: 9)
-                        .foregroundColor(isCartEmpty ? .clear : orangeColor)
-                    Text("\(goodsCount)")
-                        .foregroundColor(isCartEmpty ? .clear : .white)
-                        .font(Fonts.shared.getBoldFont(size: 7))
+                        .foregroundColor(isCartEmpty ? clearColor : orangeColor)
+                    TextViewWithParams(text: "\(goodsCount)",
+                                       font: Fonts.shared.getBoldFont(size: 7),
+                                       color: isCartEmpty ? clearColor : whiteColor)
                 }
                 .offset(x: 9, y: -9)
                 
             }
             .offset(x: 189, y: 0)
             Image(systemName: "heart")
-                .foregroundColor(.white)
+                .foregroundColor(whiteColor)
                 .frame(width: 19, height: 17)
                 .offset(x: 259, y: 0)
             Image(systemName: "person")
-                .foregroundColor(.white)
+                .foregroundColor(whiteColor)
                 .frame(width: 17, height: 17)
                 .offset(x: 330, y: 0)
         }

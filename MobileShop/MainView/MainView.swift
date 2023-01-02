@@ -22,9 +22,9 @@ struct MainView: View {
                         HStack {
                             Image("Pin")
                                 .frame(width: 12, height: 15)
-                            Text("Zihuatanejo, Gro")
-                                .font(Fonts.shared.getMediumFont(size: 15))
-                                .foregroundColor(blackColor)
+                            TextViewWithParams(text: "Zihuatanejo, Gro",
+                                               font: Fonts.shared.getMediumFont(size: 15),
+                                               color: blackColor)
                             Image(systemName: "chevron.down")
                                 .frame(width: 10, height: 5)
                                 .foregroundColor(grayColor)
@@ -41,32 +41,12 @@ struct MainView: View {
                             }
                         }
                     }
+                    TextViewTitleHStack(leftTitle: "Select category", rightTitle: "view all")
                     
-                    HStack {
-                        Text("Select category")
-                            .font(Fonts.shared.getBoldFont(size: 25))
-                            .foregroundColor(blackColor)
-                            .padding(.leading)
-                        Spacer()
-                        Text("view all")
-                            .font(Fonts.shared.getRegularFont(size: 15))
-                            .foregroundColor(orangeColor)
-                            .padding(.trailing)
-                    }
                     CircleCategories()
                 }
                 VStack {
-                    HStack {
-                        Text("Hot sales")
-                            .font(Fonts.shared.getBoldFont(size: 25))
-                            .foregroundColor(blackColor)
-                            .padding(.leading)
-                        Spacer()
-                        Text("see more")
-                            .font(Fonts.shared.getRegularFont(size: 15))
-                            .foregroundColor(orangeColor)
-                            .padding(.trailing)
-                    }
+                    TextViewTitleHStack(leftTitle: "Hot sales", rightTitle: "see more")
                     HotSales(phones: viewModel)
                 }
                 VStack {
@@ -74,17 +54,7 @@ struct MainView: View {
                     if isShow {
                         FilterView(isShow: $isShow)
                     } else {
-                        HStack {
-                            Text("Best sellers")
-                                .font(Fonts.shared.getBoldFont(size: 25))
-                                .foregroundColor(blackColor)
-                                .padding(.leading)
-                            Spacer()
-                            Text("see more")
-                                .font(Fonts.shared.getRegularFont(size: 15))
-                                .foregroundColor(orangeColor)
-                                .padding(.trailing)
-                        }
+                        TextViewTitleHStack(leftTitle: "Best sellers", rightTitle: "see more")
                         BestSellerCollectionView(mainViewModel: viewModel)
                         BottomBarView(mainViewModel: viewModel)
                     }

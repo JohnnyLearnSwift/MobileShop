@@ -12,6 +12,7 @@ struct HotSalesCell: View {
     let height: CGFloat
     let orangeColor = Colors.orange
     let blackColor = Colors.black
+    let whiteColor = Color.white
     var isNew: Bool {
         phoneCell.is_new ?? false
     }
@@ -21,6 +22,7 @@ struct HotSalesCell: View {
                 image.resizable()
             } placeholder: {
                 Image(systemName: "xmark.shield")
+                    .resizable()
             }
             .frame(height: height)
             .cornerRadius(8)
@@ -31,7 +33,7 @@ struct HotSalesCell: View {
                     .frame(width: 27, height: 27)
                 Text(isNew ? "New" : "")
                     .font(Fonts.shared.getBoldFont(size: 10))
-                    .foregroundColor(.white)
+                    .foregroundColor(whiteColor)
                 
             }
             .padding()
@@ -39,13 +41,13 @@ struct HotSalesCell: View {
             .offset(x: 32, y: 23)
             Text(phoneCell.title)
                 .font(Fonts.shared.getBoldFont(size: 25))
-                .foregroundColor(.white)
+                .foregroundColor(whiteColor)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 .padding()
                 .offset(x: 32, y: 68)
             Text(phoneCell.subtitle ?? "")
                 .font(Fonts.shared.getRegularFont(size: 11))
-                .foregroundColor(.white)
+                .foregroundColor(whiteColor)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 .padding()
                 .offset(x: 32, y: 104)
@@ -54,7 +56,7 @@ struct HotSalesCell: View {
                     .foregroundColor(blackColor)
                     .font(Fonts.shared.getBoldFont(size: 11))
                     .frame(width: 96, height: 23)
-                    .background(.white)
+                    .background(whiteColor)
             }
             .clipShape(RoundedRectangle(cornerRadius: 5))
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)

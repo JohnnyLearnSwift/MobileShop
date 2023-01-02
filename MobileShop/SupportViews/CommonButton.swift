@@ -20,7 +20,7 @@ struct CommonButton: View {
     
     var body: some View {
         Button(action: action){
-            if image != nil {
+            if let image = image {
                 image
             }
             if let text = title {

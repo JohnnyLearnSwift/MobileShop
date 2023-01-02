@@ -19,6 +19,7 @@
 		E9A168652952059100E55ACA /* BestSellerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A168642952059100E55ACA /* BestSellerCollectionView.swift */; };
 		E9A168672952059B00E55ACA /* BestSellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A168662952059B00E55ACA /* BestSellerCell.swift */; };
 		E9A89B54295D7C44005985BC /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A89B53295D7C44005985BC /* CommonButton.swift */; };
+		E9A89B56296378EE005985BC /* TextViewWithParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A89B55296378EE005985BC /* TextViewWithParams.swift */; };
 		E9BBCE62295CE37A0086EB00 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBCE61295CE37A0086EB00 /* Fonts.swift */; };
 		E9D1C8F529491920001C6436 /* MobileShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D1C8F429491920001C6436 /* MobileShopApp.swift */; };
 		E9D1C8F929491921001C6436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9D1C8F829491921001C6436 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		E9A168642952059100E55ACA /* BestSellerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerCollectionView.swift; sourceTree = "<group>"; };
 		E9A168662952059B00E55ACA /* BestSellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerCell.swift; sourceTree = "<group>"; };
 		E9A89B53295D7C44005985BC /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
+		E9A89B55296378EE005985BC /* TextViewWithParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithParams.swift; sourceTree = "<group>"; };
 		E9BBCE61295CE37A0086EB00 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		E9D1C8F129491920001C6436 /* Ecommerce Concept.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecommerce Concept.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D1C8F429491920001C6436 /* MobileShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileShopApp.swift; sourceTree = "<group>"; };
@@ -93,14 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E90481B32955265100283C5D /* ButtonViews */ = {
+		E90481B32955265100283C5D /* SupportViews */ = {
 			isa = PBXGroup;
 			children = (
 				E90481AF295522B200283C5D /* LeftBarButtonView.swift */,
 				E90481B12955232400283C5D /* RightBarItemView.swift */,
 				E9A89B53295D7C44005985BC /* CommonButton.swift */,
+				E9A89B55296378EE005985BC /* TextViewWithParams.swift */,
 			);
-			path = ButtonViews;
+			path = SupportViews;
 			sourceTree = "<group>";
 		};
 		E90481B629552F4100283C5D /* SupportViews */ = {
@@ -154,7 +157,7 @@
 				E9D1C91E294BA59B001C6436 /* MainView */,
 				E9D1C924294BA658001C6436 /* ProductDetailsView */,
 				E9D1C929294BA6C4001C6436 /* MyCartView */,
-				E90481B32955265100283C5D /* ButtonViews */,
+				E90481B32955265100283C5D /* SupportViews */,
 				E9D1C8F829491921001C6436 /* Assets.xcassets */,
 				E9D1C90A2949F54B001C6436 /* NetworkService */,
 				E9D1C9042949EEB4001C6436 /* Models */,
@@ -337,6 +340,7 @@
 				E90481B22955232400283C5D /* RightBarItemView.swift in Sources */,
 				E9F4A2AC29539A6D007845BF /* BottomBarView.swift in Sources */,
 				E9D1C92E294D0D43001C6436 /* ImageLoader.swift in Sources */,
+				E9A89B56296378EE005985BC /* TextViewWithParams.swift in Sources */,
 				E9D1C9062949EF7F001C6436 /* NetworkService.swift in Sources */,
 				E9D1C921294BA61E001C6436 /* ProductDetailsViewModel.swift in Sources */,
 				E9D1C8F529491920001C6436 /* MobileShopApp.swift in Sources */,

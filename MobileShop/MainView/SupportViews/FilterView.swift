@@ -67,9 +67,9 @@ struct DropDownMenu: View {
 //MARK: Работает в отдельном вью, но когда добавляю в main менюхи перестают выпадать
     var body: some View {
         VStack (alignment: .leading, spacing: 5) {
-            Text(title)
-                .font(Fonts.shared.getBoldFont(size: 18))
-                .foregroundColor(blackColor)
+            TextViewWithParams(text: title,
+                               font: Fonts.shared.getBoldFont(size: 18),
+                               color: blackColor)
                 .padding(.leading, 46)
             Menu {
                 ForEach(Array(dropDownList.enumerated()), id: \.offset) { index, element in
@@ -83,9 +83,9 @@ struct DropDownMenu: View {
                         .stroke(.gray, lineWidth: 1)
                         .frame(width: 337, height: 37)
                     HStack{
-                        Text(dropDownList[index])
-                            .foregroundColor(blackColor)
-                            .font(Fonts.shared.getRegularFont(size: 18))
+                        TextViewWithParams(text: dropDownList[index],
+                                           font: Fonts.shared.getRegularFont(size: 18),
+                                           color: blackColor)
                         Spacer()
                         Image(systemName: "chevron.down")
                             .foregroundColor(grayColor)
