@@ -11,12 +11,13 @@ struct MyCartView: View {
     @StateObject var viewModel: MyCartViewModel
     let blackColor = Colors.black
     let orangeColor = Colors.orange
+    let whiteColor = Color.white
     
     var body: some View {
         VStack (alignment: .leading){
-            Text("My Cart")
-                .font(Fonts.shared.getBoldFont(size: 35))
-                .foregroundColor(blackColor)
+            TextViewWithParams(text: "My Cart",
+                               font: Fonts.shared.getBoldFont(size: 35),
+                               color: blackColor)
                 .padding(.leading, 42)
                 .padding(.top, 40)
             GeometryReader { geometry in
@@ -41,15 +42,9 @@ struct MyCartView: View {
         .environmentObject(viewModel)
         .navigationBarBackButtonHidden(true)
             .navigationBarItems(
-                leading: LeftBarButtonView(width: 37, height: 37, cornerRadius: 10, image: Image(systemName: "chevron.left"), backgroundColor: blackColor, imageWidth: 7, imageHeight: 14, imageColor: .white),
-                trailing: RightBarItemView(width: 37, height: 37, cornerRadius: 10, image: Image("WhitePin"), backgroundColor: orangeColor, imageWidth: 14, imageHeight: 18, imageColor: .white, text: "Add address", textColor: blackColor, textSize: 15)
+                leading: CommonButton(image: Image(systemName: "chevron.left"), title: nil, foregroundColor: whiteColor, width: 37, height: 37, backgroundColor: blackColor, imageWidth: 7, imageHeight: 14, cornerRadius: 10, font: nil),
+                trailing: RightBarItemView(width: 37, height: 37, cornerRadius: 10, image: Image("WhitePin"), backgroundColor: orangeColor, imageWidth: 14, imageHeight: 18, imageColor: whiteColor, text: "Add address", textColor: blackColor, textSize: 15)
             )
         
     }
 }
-
-//struct MyCartView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MyCartView(viewModel: MyCartViewModel(cart: Cart()))
-//    }
-//}

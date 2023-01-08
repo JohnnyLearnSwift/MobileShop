@@ -24,7 +24,7 @@ struct FilterView: View {
                     .shadow(radius: 1)
                 VStack {
                     HStack {
-                        CommonButton(image: Image(systemName: "xmark"), title: nil, foregroundColor: .white, width: 37, height: 37, backgroundColor: blackColor, cornerRadius: 10, font: nil) {
+                        CommonButton(image: Image(systemName: "xmark"), title: nil, foregroundColor: .white, width: 37, height: 37, backgroundColor: blackColor, imageWidth: nil, imageHeight: nil, cornerRadius: 10, font: nil) {
                             isShow.toggle()
                         }
                         Spacer()
@@ -32,7 +32,7 @@ struct FilterView: View {
                             .font(Fonts.shared.getMediumFont(size: 18))
                             .foregroundColor(blackColor)
                         Spacer()
-                        CommonButton(image: nil, title: "Done", foregroundColor: .white, width: 86, height: 37, backgroundColor: orangeColor, cornerRadius: 10, font: Fonts.shared.getMediumFont(size: 18)) {
+                        CommonButton(image: nil, title: "Done", foregroundColor: .white, width: 86, height: 37, backgroundColor: orangeColor, imageWidth: nil, imageHeight: nil, cornerRadius: 10, font: Fonts.shared.getMediumFont(size: 18)) {
                             isShow.toggle()
                         }
                     }

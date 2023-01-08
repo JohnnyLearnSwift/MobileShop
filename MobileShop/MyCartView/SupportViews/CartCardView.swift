@@ -12,6 +12,7 @@ struct CartCardView: View {
     let orangeColor = Colors.orange
     let grayColor = Colors.grayTrash
     let black = Colors.blackButtons
+    let whiteColor = Color.white
     
     
     var body: some View {
@@ -31,16 +32,16 @@ struct CartCardView: View {
                         }
                         
                         VStack {
-                            Text(product.phone.title)
-                                .font(Fonts.shared.getMediumFont(size: 20))
-                                .foregroundColor(.white)
+                            TextViewWithParams(text: product.phone.title,
+                                               font: Fonts.shared.getMediumFont(size: 20),
+                                               color: whiteColor)
                                 .alignmentGuide(.leading) { d in
                                     d[HorizontalAlignment.leading]
                                 }
                             HStack {
-                                Text("$\(product.phone.price * product.quantity)")
-                                    .font(Fonts.shared.getMediumFont(size: 20))
-                                    .foregroundColor(orangeColor)
+                                TextViewWithParams(text: "$\(product.phone.price * product.quantity)",
+                                                   font: Fonts.shared.getMediumFont(size: 20),
+                                                   color: orangeColor)
                                     .alignmentGuide(.leading) { d in
                                         d[HorizontalAlignment.leading]
                                     }
@@ -64,9 +65,9 @@ struct CartCardView: View {
                                 }
                                 .offset(x: 0, y: 8)
                                 .foregroundColor(.white)
-                                Text("\(product.quantity)")
-                                    .font(Fonts.shared.getMediumFont(size: 20))
-                                    .foregroundColor(.white)
+                                TextViewWithParams(text: "\(product.quantity)",
+                                                   font: Fonts.shared.getMediumFont(size: 20),
+                                                   color: whiteColor)
                                 Button {
                                     cart.addProduct(phone: product.phone)
                                 } label: {
@@ -74,7 +75,7 @@ struct CartCardView: View {
                                         .frame(width: 10, height: 10)
                                 }
                                 .offset(x: 0, y: -8)
-                                .foregroundColor(.white)
+                                .foregroundColor(whiteColor)
                             }
                         }
                         .padding(.trailing, 25)
@@ -92,22 +93,22 @@ struct CartCardView: View {
                     .edgesIgnoringSafeArea(.horizontal)
                 VStack (spacing: 12){
                     HStack {
-                        Text("Total")
-                            .foregroundColor(.white)
-                            .font(Fonts.shared.getRegularFont(size: 15))
+                        TextViewWithParams(text: "Total",
+                                           font: Fonts.shared.getRegularFont(size: 15),
+                                           color: whiteColor)
                         Spacer()
-                        Text("\(cart.sum)")
-                            .foregroundColor(.white)
-                            .font(Fonts.shared.getRegularFont(size: 15))
+                        TextViewWithParams(text: "\(cart.sum)",
+                                           font: Fonts.shared.getRegularFont(size: 15),
+                                           color: whiteColor)
                     }
                     HStack {
-                        Text("Delivery")
-                            .foregroundColor(.white)
-                            .font(Fonts.shared.getRegularFont(size: 15))
+                        TextViewWithParams(text: "Delivery",
+                                           font: Fonts.shared.getRegularFont(size: 15),
+                                           color: whiteColor)
                         Spacer()
-                        Text(cart.delivery)
-                            .foregroundColor(.white)
-                            .font(Fonts.shared.getRegularFont(size: 15))
+                        TextViewWithParams(text: cart.delivery,
+                                           font: Fonts.shared.getRegularFont(size: 15),
+                                           color: whiteColor)
                     }
                     .padding(.bottom, 41)
                     Rectangle()
@@ -119,9 +120,9 @@ struct CartCardView: View {
                         print("button pressed")
                     }) {
                         HStack {
-                            Text("Checkout")
-                                .foregroundColor(.white)
-                                .font(Fonts.shared.getBoldFont(size: 20))
+                            TextViewWithParams(text: "Checkout",
+                                               font: Fonts.shared.getRegularFont(size: 20),
+                                               color: whiteColor)
                         }
                     }
                     .padding(.leading, 44)

@@ -20,7 +20,7 @@ struct ProductDetailsView: View {
         .navigationTitle(Text("Product details").font(Fonts.shared.getMediumFont(size: 18)).foregroundColor(blackColor))
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(
-            leading: LeftBarButtonView(width: 37, height: 37, cornerRadius: 10, image: Image(systemName: "chevron.left"), backgroundColor: blackColor, imageWidth: 7, imageHeight: 14, imageColor: .white),
+            leading: CommonButton(image: Image(systemName: "chevron.left"), title: nil, foregroundColor: .white, width: 37, height: 37, backgroundColor: blackColor, imageWidth: 7, imageHeight: 14, cornerRadius: 10, font: nil),
             trailing: RightBarItemView(width: 37, height: 37, cornerRadius: 10, image: Image(systemName: "bag"), backgroundColor: orangeColor, imageWidth: 14, imageHeight: 14, imageColor: .white, text: "", textColor: .white, textSize: 0)
         )
     }

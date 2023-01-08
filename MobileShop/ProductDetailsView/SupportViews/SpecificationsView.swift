@@ -12,6 +12,7 @@ struct SpecificationsView: View {
     let blackColor = Colors.black
     let grayColor = Colors.grayTextSettings
     let orangeColor = Colors.orange
+    let whiteColor = Color.white
     let list = ["Shop", "Details", "Features"]
     var index = 0
     var rating: Int {
@@ -28,14 +29,14 @@ struct SpecificationsView: View {
             RoundedRectangle(cornerRadius: 30)
                 .shadow(radius: 1)
                 .frame(height: 471)
-                .foregroundColor(.white)
+                .foregroundColor(whiteColor)
             VStack {
                 HStack {
                     Text(viewModel.title)
                         .font(Fonts.shared.getMediumFont(size: 24))
                         .foregroundColor(blackColor)
                     Spacer()
-                    RightBarItemView(width: 37, height: 33, cornerRadius: 10, image: Image(systemName: "heart"), backgroundColor: blackColor, imageWidth: 14, imageHeight: 13, imageColor: .white, text: "", textColor: .white, textSize: 0)
+                    RightBarItemView(width: 37, height: 33, cornerRadius: 10, image: Image(systemName: "heart"), backgroundColor: blackColor, imageWidth: 14, imageHeight: 13, imageColor: whiteColor, text: "", textColor: whiteColor, textSize: 0)
                 }
                 .padding(.leading, 38)
                 .padding(.trailing, 37)
@@ -56,10 +57,10 @@ struct SpecificationsView: View {
                 HStack {
                     ForEach(Array(list.enumerated()), id: \.element) { index, category in
                         VStack {
-                            Text(category)
-                                .font(isEqual(index: index) ? Fonts.shared.getBoldFont(size: 20) : Fonts.shared.getRegularFont(size: 20))
-                                .foregroundColor(isEqual(index: index) ? blackColor : .black)
-                                .opacity(isEqual(index: index) ? 1 : 0.5)
+                            TextViewWithParams(text: category,
+                                               font: isEqual(index: index) ? Fonts.shared.getBoldFont(size: 20) : Fonts.shared.getRegularFont(size: 20),
+                                               color: isEqual(index: index) ? blackColor : .black)
+                            .opacity(isEqual(index: index) ? 1 : 0.5)
                             RoundedRectangle(cornerRadius: 2)
                                 .frame(height: 2)
                                 .foregroundColor(isEqual(index: index) ? orangeColor : .clear)
@@ -86,11 +87,11 @@ struct SpecificationsView: View {
                 .padding(.trailing, 37)
                 .padding(.top, 33)
                 HStack {
-                    Text("Select color and capacity")
-                        .foregroundColor(blackColor)
-                        .font(Fonts.shared.getMediumFont(size: 16))
-                        .padding(.leading, 38)
-                        .padding(.top, 29)
+                    TextViewWithParams(text: "Select color and capacity",
+                                       font: Fonts.shared.getMediumFont(size: 16),
+                                       color: blackColor)
+                    .padding(.leading, 38)
+                    .padding(.top, 29)
                     Spacer()
                 }
                 HStack {
@@ -103,7 +104,7 @@ struct SpecificationsView: View {
                                 Image(systemName: "checkmark")
                                     .resizable()
                                     .frame(width: 17, height: 12)
-                                    .foregroundColor(isEqual(index: index) ? .white : .clear)
+                                    .foregroundColor(isEqual(index: index) ? whiteColor : .clear)
                             }
                             .padding(.trailing, 18)
                         }
@@ -115,9 +116,9 @@ struct SpecificationsView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .frame(width: 71, height: 30)
                                     .foregroundColor(isEqual(index: index) ? orangeColor : .clear)
-                                Text(capacity)
-                                    .font(Fonts.shared.getBoldFont(size: 13))
-                                    .foregroundColor(isEqual(index: index) ? .white : Color(hex: "8d8d8d"))
+                                TextViewWithParams(text: capacity,
+                                                   font: Fonts.shared.getBoldFont(size: 13),
+                                                   color: isEqual(index: index) ? whiteColor : Color(hex: "8d8d8d"))
                             }
                         }
                     }
@@ -125,20 +126,20 @@ struct SpecificationsView: View {
                 .padding(.leading, 35)
                 .padding(.trailing, 40)
                 Button(action: {
-                        print("button pressed")
+                    print("button pressed")
                 }) {
                     HStack {
-                        Text("Add to Cart")
-                            .foregroundColor(.white)
-                            .font(Fonts.shared.getBoldFont(size: 20))
-                            .padding(.leading, 45)
+                        TextViewWithParams(text: "Add to Cart",
+                                           font: Fonts.shared.getBoldFont(size: 20),
+                                           color: whiteColor)
+                        .padding(.leading, 45)
                         Spacer()
-                        Text("$\(viewModel.price)")
-                            .foregroundColor(.white)
-                            .font(Fonts.shared.getBoldFont(size: 20))
-                            .padding(.trailing, 38)
+                        TextViewWithParams(text: "$\(viewModel.price)",
+                                           font: Fonts.shared.getBoldFont(size: 20),
+                                           color: whiteColor)
+                        .padding(.trailing, 38)
                     }
-                 }
+                }
                 .frame(width: 355, height: 54)
                 .background(orangeColor)
                 .cornerRadius(10)
